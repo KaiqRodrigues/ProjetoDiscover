@@ -1,0 +1,158 @@
+  * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-url);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+/*temas*/
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --border-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --social-shadow: rgba(255, 255, 255, 0.2);
+  --tema: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0);
+  --border-color: rgba(0, 0, 0, 0.5);
+  --social-shadow: rgba(0, 0, 0, 0.1);
+  --tema: url(./assets/sun.svg);
+}
+
+/*Botao de tema*/
+
+#tema {
+  position: relative;
+  width: 64px;
+  margin: 5px auto;
+}
+
+#tema button {
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  border: 0;
+  background: white var(--tema) center no-repeat;
+
+  left: 0;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #tema button {
+  right: 0;
+  left: initial;
+}
+
+#tema span {
+  display: block;
+  width: 60px;
+  height: 24px;
+  border: var(--border-color);
+  border-radius: 9999px;
+  background: var(--surface-color);
+  backdrop-filter: blur(5px);
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+p {
+  font-weight: 500;
+  padding: 8px;
+}
+
+#perfil {
+  text-align: center;
+  padding: 24px;
+}
+
+#perfil img {
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgb(196, 228, 80);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 0;
+}
+
+ul li a {
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  display: flex;
+  align-items: center; /* Alinha na vertical */
+  justify-content: center; /* Alinha na horizontal  */
+
+  /* Padding e Margin usa a ideia de relogio, sendo os elementos respectivos ao sistema horario,
+   1° Cima 2° Direita 3° Baixo 4° Esquerda*/
+  padding: 16px 24px;
+  /*No caso de dois valores, eles são duplos, o 1° é a parte de cima com o de baixo, o 2° são os lados*/
+
+  background-color: var(--surface-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--border-color);
+}
+
+#social-media {
+  display: flex;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#social-media a {
+  padding: 16px;
+}
+
+#social-media a:hover {
+  background: var(--social-shadow);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  padding: 24px 0;
+  font-size: 14px;
+  text-align: center;
+}
