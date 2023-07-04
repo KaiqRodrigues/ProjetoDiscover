@@ -54,6 +54,9 @@ body {
   transform: translateY(-50%);
 }
 
+#tema button:hover{
+  outline:8px solid var(--social-shadow);
+}
 .light #tema button {
   animation: slide-on 0.4s forwards;
 }
