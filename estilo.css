@@ -47,17 +47,15 @@ body {
   width: 34px;
   border: 0;
   background: white var(--tema) center no-repeat;
-
-  left: 0;
   position: absolute;
   top: 50%;
+  animation: slide-off 0.4s forwards;
   z-index: 1;
   transform: translateY(-50%);
 }
 
 .light #tema button {
-  right: 0;
-  left: initial;
+  animation: slide-on 0.4s forwards;
 }
 
 #tema span {
@@ -164,5 +162,21 @@ footer {
   }
   .light{
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+@keyframes slide-on {
+  from{
+    left: 0;
+  }
+  to{
+    left:50%;
+  }
+}
+@keyframes slide-off {
+  from{
+    left: 50%;
+  }
+  to{
+    left:0;
   }
 }
