@@ -9,6 +9,7 @@ body {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  height: 100vh;
 }
 
 /*temas*/
@@ -71,7 +72,7 @@ body {
 
 #container {
   width: 100%;
-  max-width: 588px;
+  max-width: 400px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
@@ -156,4 +157,12 @@ footer {
   padding: 24px 0;
   font-size: 14px;
   text-align: center;
+}
+@media (min-width: 700px) {
+  :root{
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light{
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
