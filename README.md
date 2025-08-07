@@ -1,4 +1,4 @@
-
+Projeto realizado acompanhando o curso gratuito da RocketSeat, Discover.
 
 
 <p align="center">
